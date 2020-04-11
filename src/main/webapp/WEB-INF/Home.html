@@ -1,6 +1,13 @@
-<html>
-<form jwcid="stockQuoteForm@Form" listener="listener:onOk" >
-    <input type="text" jwcid="stockId@TextField" value="ognl:stockId"/>
+<html jwcid="@Shell" title="Stock Quote">
+<body jwcid="@Body">
+<form jwcid="stockQuoteForm@Form" listener="listener:onOk" onsubmit="javascript: alert('dsfdasf');">
+    <!--<input type="text" jwcid="stockId@TextField" value="ognl:stockId"/>-->
+    <select jwcid="stockId">
+        <option value="0">IBM</option>
+        <option value="1">RHAT</option>
+    </select>
+    on <span jwcid="quoteDate">May 3, 2005</span>
     <input type="submit" value="OK"/>
 </form>
+</body>
 </html>

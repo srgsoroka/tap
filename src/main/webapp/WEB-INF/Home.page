@@ -2,5 +2,12 @@
 <!DOCTYPE page-specification PUBLIC  "-//Apache Software Foundation//Tapestry Specification 4.0//EN"
         "http://jakarta.apache.org/tapestry/dtd/Tapestry_4_0.dtd">
 <page-specification class="sample.Home">
-    <property name="stockValue" />
+    <property name="stockValue"/>
+    <component id="stockId" type="PropertySelection">
+        <binding name="model" value="availStockIds"/>
+        <binding name="value" value="stockId"/>
+    </component>
+    <component id="quoteDate" type="DatePicker">
+        <binding name="value" value="quoteDate"/>
+    </component>
 </page-specification>
