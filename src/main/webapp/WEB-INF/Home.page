@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE page-specification PUBLIC  "-//Apache Software Foundation//Tapestry Specification 4.0//EN"
+        "http://jakarta.apache.org/tapestry/dtd/Tapestry_4_0.dtd">
+<page-specification class="sample.Home">
+    <inject property="resultPage" type="page" object="Result"/>
+    <property name="stockId"  initial-value="literal:MSFT" />
+
+    <property name="stockValue" />
+
+    <component id="stockQuoteForm" type="Form">
+        <binding name="listener" value="listener:onOk"/>
+    </component>
+    <component id="stockId" type="TextField"> <binding name="value" value="ognl:stockId"/> </component>
+</page-specification>
