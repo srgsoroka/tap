@@ -2,11 +2,16 @@ package sample;
 
 import org.apache.tapestry.IPage;
 import org.apache.tapestry.IRequestCycle;
+import org.apache.tapestry.annotations.InitialValue;
+import org.apache.tapestry.annotations.InjectPage;
 import org.apache.tapestry.html.BasePage;
 
 public abstract class Home extends BasePage {
+
+    @InjectPage("Result")
     abstract public Result getResultPage();
 
+    @InitialValue("literal:MSFT")
     public abstract String getStockId();
 
     public abstract void setStockId(String stockId);
